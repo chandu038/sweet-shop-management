@@ -1,5 +1,3 @@
-<img width="1919" height="996" alt="Screenshot 2025-12-14 045002" src="https://github.com/user-attachments/assets/63812d72-bdf9-4fc5-9cbd-6308414fd7e7" />
-<img width="1897" height="1009" alt="Screenshot 2025-12-14 044949" src="https://github.com/user-attachments/assets/a7c82b12-5cc1-4cb8-8c01-3de7c5cf0105" />
 # 🍬 Sweet Shop Management System
 **Incubyte AI Kata – Full Stack Assessment**
 
@@ -174,6 +172,38 @@ Run this SQL to create the database:
 CREATE DATABASE sweetshop;
 ```
 
+-- Tables for users and sweets (example schema)
+-- If you use Spring Data JPA with ddl-auto=update, Hibernate can create these for you.
+-- The statements below are provided so you can create the schema manually if desired.
+
+```sql
+-- Users table
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(50) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL,
+  role VARCHAR(20) NOT NULL DEFAULT 'USER',
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT now()
+);
+
+-- Sweets table
+CREATE TABLE sweets (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(150) NOT NULL,
+  category VARCHAR(100),
+  description TEXT,
+  price NUMERIC(10,2) NOT NULL,
+  quantity INTEGER NOT NULL DEFAULT 0,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT now(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT now()
+);
+
+-- Optional indexes
+CREATE INDEX idx_sweets_name ON sweets (name);
+CREATE INDEX idx_sweets_category ON sweets (category);
+```
+
 Example application.yml datasource configuration:
 ```yaml
 spring:
@@ -219,7 +249,7 @@ mvn clean test
 
 AuthController MockMvc tests were attempted but resulted in Spring Security auto-configuration conflicts in Spring Boot 4.0.0, causing application context loading failures.
 
-To keep focus on core business logic, full TDD (RED → GREEN → REFACTOR) was completed for the Sweet module, which satisfies the assessment’s expectations. This limitation is documented transparently in the repository.
+To keep focus on core business logic, full TDD (RED → GREEN → REFACTOR) was completed for the Sweet module, which satisfies the assessment’s expectations. This limitation is documented transpare[...]
 
 ---
 
