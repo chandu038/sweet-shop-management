@@ -1,3 +1,5 @@
+<img width="1919" height="996" alt="Screenshot 2025-12-14 045002" src="https://github.com/user-attachments/assets/63812d72-bdf9-4fc5-9cbd-6308414fd7e7" />
+<img width="1897" height="1009" alt="Screenshot 2025-12-14 044949" src="https://github.com/user-attachments/assets/a7c82b12-5cc1-4cb8-8c01-3de7c5cf0105" />
 # 🍬 Sweet Shop Management System
 **Incubyte AI Kata – Full Stack Assessment**
 
