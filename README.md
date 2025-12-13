@@ -46,6 +46,7 @@ This project was developed as part of the **Incubyte AI Kata Assessment**, follo
 - Axios
 - React Router
 - HTML / CSS
+- TailwindCss
 
 ---
 
