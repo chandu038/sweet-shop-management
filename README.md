@@ -91,6 +91,44 @@ sweet-shop/
 
 ---
 
+## 🖼️ Screenshots
+
+Below are screenshots of the application. The first image is the Admin page (dashboard) for reference.
+
+<div style="display:flex;flex-wrap:wrap;gap:12px;">
+  <figure style="flex:1 1 32%;min-width:240px;">
+    <img alt="Admin Page - Dashboard" src="https://github.com/user-attachments/assets/d3bb0770-18c4-4824-b500-7d6e0ea99129" style="width:100%;border:1px solid #ddd;border-radius:6px;" />
+    <figcaption style="text-align:center;font-size:0.95rem;margin-top:6px;">Admin Page — Dashboard</figcaption>
+  </figure>
+
+  <figure style="flex:1 1 32%;min-width:240px;">
+    <img alt="Sweets List" src="https://github.com/user-attachments/assets/fee7591a-b66e-4655-ba76-330d95f96c07" style="width:100%;border:1px solid #ddd;border-radius:6px;" />
+    <figcaption style="text-align:center;font-size:0.95rem;margin-top:6px;">Sweets Listing</figcaption>
+  </figure>
+
+  <figure style="flex:1 1 32%;min-width:240px;">
+    <img alt="Add Sweet Form" src="https://github.com/user-attachments/assets/a096aa86-e0db-4ae6-85fb-898e640faacb" style="width:100%;border:1px solid #ddd;border-radius:6px;" />
+    <figcaption style="text-align:center;font-size:0.95rem;margin-top:6px;">Add / Edit Sweet</figcaption>
+  </figure>
+
+  <figure style="flex:1 1 32%;min-width:240px;">
+    <img alt="Purchase Flow" src="https://github.com/user-attachments/assets/73ffe037-2748-4506-8b9f-3c8c4058f001" style="width:100%;border:1px solid #ddd;border-radius:6px;" />
+    <figcaption style="text-align:center;font-size:0.95rem;margin-top:6px;">Purchase Flow / Checkout</figcaption>
+  </figure>
+
+  <figure style="flex:1 1 32%;min-width:240px;">
+    <img alt="Search & Filter" src="https://github.com/user-attachments/assets/1a8d0cfa-faa6-4c2d-bfbd-05d23521b3e2" style="width:100%;border:1px solid #ddd;border-radius:6px;" />
+    <figcaption style="text-align:center;font-size:0.95rem;margin-top:6px;">Search & Filters</figcaption>
+  </figure>
+
+  <figure style="flex:1 1 32%;min-width:240px;">
+    <img alt="Admin - Inventory Management" src="https://github.com/user-attachments/assets/7b5fd013-26ed-438b-bbc0-96816baf0876" style="width:100%;border:1px solid #ddd;border-radius:6px;" />
+    <figcaption style="text-align:center;font-size:0.95rem;margin-top:6px;">Inventory / Restock (Admin)</figcaption>
+  </figure>
+</div>
+
+---
+
 ## 🔐 Authentication & Authorization
 
 - JWT-based authentication
@@ -185,7 +223,7 @@ mvn clean test
 
 AuthController MockMvc tests were attempted but resulted in Spring Security auto-configuration conflicts in Spring Boot 4.0.0, causing application context loading failures.
 
-To keep focus on core business logic, full TDD (RED → GREEN → REFACTOR) was completed for the Sweet module, which satisfies the assessment’s expectations. This limitation is documented transparently.
+To keep focus on core business logic, full TDD (RED → GREEN → REFACTOR) was completed for the Sweet module, which satisfies the assessment’s expectations. This limitation is documented transpare[...]
 
 ---
 
