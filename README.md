@@ -50,7 +50,6 @@ This project was developed as part of the **Incubyte AI Kata Assessment**, follo
 ---
 
 ## 📂 Project Structure
-
 sweet-shop/
 ├── backend/
 │ ├── src/main/java/com/Incubyte/Sweet_Shop_Backend/
