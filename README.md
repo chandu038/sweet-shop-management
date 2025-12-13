@@ -52,38 +52,37 @@ This project was developed as part of the **Incubyte AI Kata Assessment**, follo
 ## 📂 Project Structure
 sweet-shop/
 ├── backend/
-│ ├── src/main/java/com/Incubyte/Sweet_Shop_Backend/
-│ │ ├── controller/
-│ │ │ ├── SweetController.java
-│ │ │ └── AuthController.java
-│ │ ├── service/
-│ │ ├── repo/
-│ │ ├── model/
-│ │ ├── security/
-│ │ │ ├── JwtUtil.java
-│ │ │ ├── JwtAuthFilter.java
-│ │ │ └── SecurityConfig.java
-│ │ └── SweetShopBackendApplication.java
-│ │
-│ ├── src/test/java/
-│ │ ├── service/
-│ │ │ └── SweetServiceTest.java
-│ │ └── controller/
-│ │ └── SweetControllerTest.java
-│ │
-│ └── application.yml
+│   ├── src/main/java/com/Incubyte/Sweet_Shop_Backend/
+│   │   ├── controller/
+│   │   │   ├── SweetController.java
+│   │   │   └── AuthController.java
+│   │   ├── service/
+│   │   ├── repo/
+│   │   ├── model/
+│   │   ├── security/
+│   │   │   ├── JwtUtil.java
+│   │   │   ├── JwtAuthFilter.java
+│   │   │   └── SecurityConfig.java
+│   │   └── SweetShopBackendApplication.java
+│   ├── src/test/java/
+│   │   ├── service/
+│   │   │   └── SweetServiceTest.java
+│   │   └── controller/
+│   │       └── SweetControllerTest.java
+│   └── application.yml
 │
 ├── frontend/
-│ ├── src/
-│ │ ├── admin/
-│ │ ├── auth/
-│ │ ├── layout/
-│ │ ├── pages/
-│ │ ├── sweets/
-│ │ ├── App.tsx
-│ │ └── main.tsx
+│   ├── src/
+│   │   ├── admin/
+│   │   ├── auth/
+│   │   ├── layout/
+│   │   ├── pages/
+│   │   ├── sweets/
+│   │   ├── App.tsx
+│   │   └── main.tsx
 │
 └── README.md
+
 ---
 
 ## 🔐 Authentication & Authorization
@@ -129,9 +128,14 @@ sweet-shop/
 - PostgreSQL
 
 ### Database Setup
-sql
+
+Run this SQL to create the database:
+```sql
 CREATE DATABASE sweetshop;
-application.yml
+```
+
+Example application.yml datasource configuration:
+```yaml
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/sweetshop
@@ -142,84 +146,86 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+```
 
 Run Backend
+```bash
 cd backend
 mvn clean spring-boot:run
+```
 
-🧪 Test-Driven Development (TDD)
+---
+
+## 🧪 Test-Driven Development (TDD)
+
 TDD Coverage
-Layer	Status
-Sweet Service Tests	✅ Completed
-Sweet Controller (MockMvc) ⚠️ Attempted & Documented
-Auth Controller Tests	⚠️ Attempted & Documented
+| Layer | Status |
+|---|---|
+| Sweet Service Tests | ✅ Completed |
+| Sweet Controller (MockMvc) | ⚠️ Attempted & Documented |
+| Auth Controller Tests | ⚠️ Attempted & Documented |
+
 TDD Workflow Followed
-
-RED – Write failing test
-
-GREEN – Minimal implementation
-
-REFACTOR – Improve code quality
-
-Repeated consistently for Sweet module features.
+- RED – Write failing test
+- GREEN – Minimal implementation
+- REFACTOR – Improve code quality
 
 Run Tests
+```bash
 mvn clean test
+```
 
 ⚠️ AuthController Test Note (Transparency)
 
 AuthController MockMvc tests were attempted but resulted in Spring Security auto-configuration conflicts in Spring Boot 4.0.0, causing application context loading failures.
 
-To keep focus on core business logic, full TDD (RED → GREEN → REFACTOR) was completed for the Sweet module, which satisfies the assessment’s expectations.
+To keep focus on core business logic, full TDD (RED → GREEN → REFACTOR) was completed for the Sweet module, which satisfies the assessment’s expectations. This limitation is documented transparently.
 
-This limitation is documented transparently.
+---
 
-🎨 Frontend Overview
+## 🎨 Frontend Overview
+
 Features
-
-User registration & login
-
-Sweet listing dashboard
-
-Search & filter sweets
-
-Purchase flow with stock validation
-
-Admin CRUD operations
+- User registration & login
+- Sweet listing dashboard
+- Search & filter sweets
+- Purchase flow with stock validation
+- Admin CRUD operations
 
 Run Frontend
+```bash
 cd frontend
 npm install
 npm start
+```
 
-🧠 AI Usage Disclosure
+---
+
+## 🧠 AI Usage Disclosure
+
 AI Tools Used
-
-ChatGPT
+- ChatGPT
 
 Usage
-
-Boilerplate generation
-
-Unit & controller test assistance
-
-Debugging Spring Security & JWT
-
-Documentation & README preparation
+- Boilerplate generation
+- Unit & controller test assistance
+- Debugging Spring Security & JWT
+- Documentation & README preparation
 
 Reflection
-
 AI improved productivity, but all logic, refactoring, and validations were reviewed and implemented manually.
 
-🧾 Git & Version Control
+---
 
-Small, meaningful commits
+## 🧾 Git & Version Control
 
-Clear TDD progression (RED → GREEN → REFACTOR)
-
-AI co-author attribution when applicable
+- Small, meaningful commits
+- Clear TDD progression (RED → GREEN → REFACTOR)
+- AI co-author attribution when applicable
 
 Sample Commit
+```bash
 git commit -m "test: add failing test for purchase sweet (RED)
 
 Co-authored-by: ChatGPT <AI@users.noreply.github.com>"
+```
