@@ -1,9 +1,3 @@
-<img width="1915" height="743" alt="Screenshot 2025-12-13 171457" src="https://github.com/user-attachments/assets/d3bb0770-18c4-4824-b500-7d6e0ea99129" />
-<img width="1893" height="832" alt="Screenshot 2025-12-13 171416" src="https://github.com/user-attachments/assets/fee7591a-b66e-4655-ba76-330d95f96c07" />
-<img width="1881" height="844" alt="Screenshot 2025-12-13 171340" src="https://github.com/user-attachments/assets/a096aa86-e0db-4ae6-85fb-898e640faacb" />
-<img width="1917" height="831" alt="Screenshot 2025-12-13 171217" src="https://github.com/user-attachments/assets/73ffe037-2748-4506-8b9f-3c8c4058f001" />
-<img width="1918" height="820" alt="Screenshot 2025-12-13 154456" src="https://github.com/user-attachments/assets/1a8d0cfa-faa6-4c2d-bfbd-05d23521b3e2" />
-<img width="1916" height="826" alt="Screenshot 2025-12-13 145455" src="https://github.com/user-attachments/assets/7b5fd013-26ed-438b-bbc0-96816baf0876" />
 # 🍬 Sweet Shop Management System
 **Incubyte AI Kata – Full Stack Assessment**
 
@@ -223,7 +217,7 @@ mvn clean test
 
 AuthController MockMvc tests were attempted but resulted in Spring Security auto-configuration conflicts in Spring Boot 4.0.0, causing application context loading failures.
 
-To keep focus on core business logic, full TDD (RED → GREEN → REFACTOR) was completed for the Sweet module, which satisfies the assessment’s expectations. This limitation is documented transpare[...]
+To keep focus on core business logic, full TDD (RED → GREEN → REFACTOR) was completed for the Sweet module, which satisfies the assessment’s expectations. This limitation is documented transparently in the repository.
 
 ---
 
