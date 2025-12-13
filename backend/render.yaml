@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: sweet-shop-backend
+    env: java
+    buildCommand: ./mvnw clean install -DskipTests
+    startCommand: java -jar target/Sweet_Shop_Backend-0.0.1-SNAPSHOT.jar
