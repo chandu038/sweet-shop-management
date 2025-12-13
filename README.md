@@ -65,29 +65,26 @@ sweet-shop/
 │ │ │ ├── JwtAuthFilter.java
 │ │ │ └── SecurityConfig.java
 │ │ └── SweetShopBackendApplication.java
+│ │
 │ ├── src/test/java/
 │ │ ├── service/
 │ │ │ └── SweetServiceTest.java
-│ │ ├
-│ │___ application.yml
-│  
+│ │ └── controller/
+│ │ └── SweetControllerTest.java
+│ │
+│ └── application.yml
 │
 ├── frontend/
 │ ├── src/
 │ │ ├── admin/
 │ │ ├── auth/
-│ │ ├── Layout/
-| | |__ pages/
-| | |__ sweets
-│ │ └── App.tsx 
-│ |_____ main.tsx
-└── README.md<img width="1915" height="743" alt="Screenshot 2025-12-13 171457" src="https://github.com/user-attachments/assets/ce8c834f-8607-4c77-8046-379f24d4ef23" />
-
-
-
-
-
-
+│ │ ├── layout/
+│ │ ├── pages/
+│ │ ├── sweets/
+│ │ ├── App.tsx
+│ │ └── main.tsx
+│
+└── README.md
 ---
 
 ## 🔐 Authentication & Authorization
