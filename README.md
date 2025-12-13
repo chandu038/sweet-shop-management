@@ -172,6 +172,12 @@ Run this SQL to create the database:
 CREATE DATABASE sweetshop;
 ```
 
+<!-- Moved the two top images into the Database Setup section as requested -->
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin:12px 0;">
+  <img width="1919" height="996" alt="Screenshot 2025-12-14 045002" src="https://github.com/user-attachments/assets/63812d72-bdf9-4fc5-9cbd-6308414fd7e7" style="max-width:48%;height:auto;border:1px solid #ddd;border-radius:6px;" />
+  <img width="1897" height="1009" alt="Screenshot 2025-12-14 044949" src="https://github.com/user-attachments/assets/a7c82b12-5cc1-4cb8-8c01-3de7c5cf0105" style="max-width:48%;height:auto;border:1px solid #ddd;border-radius:6px;" />
+</div>
+
 -- Tables for users and sweets (example schema)
 -- If you use Spring Data JPA with ddl-auto=update, Hibernate can create these for you.
 -- The statements below are provided so you can create the schema manually if desired.
