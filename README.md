@@ -82,12 +82,7 @@ sweet-shop/
 │ │ └── App.tsx 
 │ |_____ main.tsx
 └── README.md<img width="1915" height="743" alt="Screenshot 2025-12-13 171457" src="https://github.com/user-attachments/assets/ce8c834f-8607-4c77-8046-379f24d4ef23" />
-<img width="1893" height="832" alt="Screenshot 2025-12-13 171416" src="https://github.com/user-attachments/assets/7fc4360c-1485-4b28-b1fb-46da70de23bc" />
-<img width="1881" height="844" alt="Screenshot 2025-12-13 171340" src="https://github.com/user-attachments/assets/184be41a-4d8a-4889-9617-297fb2a1b387" />
-<img width="1917" height="831" alt="Screenshot 2025-12-13 171217" src="https://github.com/user-attachments/assets/f3e2598b-02d4-4338-b889-f2c7220773c7" />
-<img width="1918" height="820" alt="Screenshot 2025-12-13 154456" src="https://github.com/user-attachments/assets/4f6e0e80-edc4-405d-b7d7-392479dd33c6" />
-<img width="1916" height="826" alt="Screenshot 2025-12-13 145455" src="https://github.com/user-attachments/assets/dc16501d-f520-4469-a5f9-4fde9ae6e864" />
-<img width="1371" height="800" alt="Screenshot 2025-12-13 144449" src="https://github.com/user-attachments/assets/6e5b341e-a128-4441-812a-bb46a8d06a8f" />
+
 
 
 
