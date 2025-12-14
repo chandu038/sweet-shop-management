@@ -1,13 +1,9 @@
 # 🍬 Sweet Shop Management System
 **Incubyte AI Kata – Full Stack Assessment**
 ----
-**(name changed from Sweet Haven to SweetShop)**
-
-**Frontend**:https://693e4ee154739a6a7f5a8281--symphonious-speculoos-5dac63.netlify.app/login
-
-**Backend**:https://sweet-shop-management-i179.onrender.com
 
 ---
+**(name changed from Sweet Haven to SweetShop)**
 
 ## 📌 Project Overview
 
@@ -48,6 +44,9 @@ This project was developed as part of the **Incubyte AI Kata Assessment**, follo
 - MockMvc
 
 ### Frontend
+
+**Frontend**:https://693e4ee154739a6a7f5a8281--symphonious-speculoos-5dac63.netlify.app/login
+
 - React
 - Axios
 - React Router
@@ -166,6 +165,9 @@ Below are screenshots of the application. The first image is the Admin page (das
 ---
 
 ## ⚙️ Backend Setup
+
+
+**Backend**:https://sweet-shop-management-i179.onrender.com
 
 ### Prerequisites
 - Java 17
