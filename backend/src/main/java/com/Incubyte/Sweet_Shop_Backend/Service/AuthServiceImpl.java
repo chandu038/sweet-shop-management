@@ -44,4 +44,27 @@ public class AuthServiceImpl implements AuthService {
 
         return jwtUtil.generateToken(username);
     }
+    
+public User registercheck(User user) {
+    System.out.println("=== REGISTER DEBUG ===");
+    System.out.println("Received role: " + user.getRole());
+    
+    if (userRepo.findByUsername(user.getUsername()).isPresent()) {
+        throw new RuntimeException("Username already exists");
+    }
+
+    user.setPassword(encoder.encode(user.getPassword()));
+    if (user.getRole() == null || user.getRole().isEmpty()) {
+        System.out.println("Role was null/empty, setting to USER");
+        user.setRole("USER");
+    } else {
+        System.out.println("Role is: " + user.getRole());
+    }
+    
+    User savedUser = userRepo.save(user);
+    System.out.println("Saved user role: " + savedUser.getRole());
+    System.out.println("=== END DEBUG ===");
+    
+    return savedUser;
+}
 }
