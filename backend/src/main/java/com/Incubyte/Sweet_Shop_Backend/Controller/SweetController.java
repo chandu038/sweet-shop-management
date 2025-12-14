@@ -16,8 +16,8 @@ public class SweetController {
 
     @Autowired
     private SweetService sweetService;
-
-    @PostMapping("/add")
+    @PostMapping
+    @PreAuthorize("hasRole('ADMIN')")
     public Sweet addSweet(@RequestBody Sweet sweet) {
         return sweetService.addSweet(sweet);
     }
