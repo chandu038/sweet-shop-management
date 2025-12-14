@@ -3,6 +3,7 @@ import com.Incubyte.Sweet_Shop_Backend.Security.JwtAuthFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;  // ADD THIS
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -12,6 +13,7 @@ import org.springframework.web.cors.CorsConfigurationSource;
 
 @Configuration
 @EnableWebSecurity
+@EnableMethodSecurity  // ← ADD THIS LINE!
 public class SecurityConfig {
 
     @Autowired
@@ -23,17 +25,8 @@ public class SecurityConfig {
             .cors(cors -> cors.configurationSource(corsConfigurationSource))
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-                // Public endpoints
                 .requestMatchers("/api/auth/**").permitAll()
-                
-                // Admin-only endpoints
-                .requestMatchers("/api/sweets/add", "/api/sweets/*/edit", "/api/sweets/*/delete").hasRole("ADMIN")
-                
-                // User endpoints (authenticated users)
-                .requestMatchers("/api/sweets/**").authenticated()
-                
-                // All other requests require authentication
-                .anyRequest().authenticated()
+                .anyRequest().authenticated()  // Simplified - let @PreAuthorize handle role checks
             )
             .sessionManagement(session -> session
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
