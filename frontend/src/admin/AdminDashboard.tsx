@@ -1,6 +1,20 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+// Inline icon components using emojis to avoid depending on 'lucide-react'
+function ShoppingCart({ size = 18 }: { size?: number }) {
+  return <span style={{ fontSize: size }}>🛒</span>;
+}
+function Package({ size = 18 }: { size?: number }) {
+  return <span style={{ fontSize: size }}>📦</span>;
+}
+function Edit({ size = 16 }: { size?: number }) {
+  return <span style={{ fontSize: size }}>✏️</span>;
+}
+function Trash2({ size = 16 }: { size?: number }) {
+  return <span style={{ fontSize: size }}>🗑️</span>;
+}
+
 interface Sweet {
   id: number;
   name: string;
@@ -327,16 +341,16 @@ const AdminDashboard = () => {
 
                 {/* Content */}
                 <div className="p-5">
-                  <h3 className="text-xl font-bold text-gray-800 mb-1">{sweet.name}</h3>
-                  <p className="text-sm text-gray-500 mb-3">{sweet.category}</p>
+                  <h3 className="text-xl font-bold text-gray-800 mb-1 truncate">{sweet.name}</h3>
+                  <p className="text-sm text-purple-600 mb-3 font-medium">{sweet.category}</p>
                   
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-2xl font-bold text-pink-600">
                       ₹{sweet.price.toFixed(2)}
                     </span>
                     <span 
-                      className={`text-sm font-semibold ${
-                        sweet.quantity === 0 ? 'text-red-500' : 'text-green-600'
+                      className={`text-sm font-semibold px-3 py-1 rounded-full ${
+                        sweet.quantity === 0 ? 'bg-red-100 text-red-600' : 'bg-green-100 text-green-600'
                       }`}
                     >
                       Stock: {sweet.quantity}
@@ -349,15 +363,15 @@ const AdminDashboard = () => {
                     {sweet.quantity > 0 ? (
                       <button
                         onClick={() => handlePurchase(sweet.id)}
-                        className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-purple-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-purple-700 transition"
+                        className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-purple-500 to-purple-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-purple-700 transition-all shadow-md"
                       >
-                        <span className="text-lg">🛒</span>
+                        <ShoppingCart size={18} />
                         Purchase 🛒
                       </button>
                     ) : (
                       <button
                         disabled
-                        className="w-full px-4 py-2 bg-gray-300 text-gray-500 font-semibold rounded-lg cursor-not-allowed"
+                        className="w-full px-4 py-2.5 bg-gray-300 text-gray-500 font-semibold rounded-lg cursor-not-allowed"
                       >
                         Out of Stock
                       </button>
@@ -366,9 +380,9 @@ const AdminDashboard = () => {
                     {/* Restock Button */}
                     <button
                       onClick={() => handleRestock(sweet.id)}
-                      className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition"
+                      className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-all shadow-md"
                     >
-                      <span className="text-lg">📦</span>
+                      <Package size={18} />
                       Restock +20 📦
                     </button>
 
@@ -376,17 +390,17 @@ const AdminDashboard = () => {
                     <div className="grid grid-cols-2 gap-2">
                       <button
                         onClick={() => handleEdit(sweet)}
-                        className="flex items-center justify-center gap-2 px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition"
+                        className="flex items-center justify-center gap-1 px-3 py-2.5 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-all shadow-md text-sm"
                       >
-                        <span className="text-lg">✏️</span>
-                        Edit 🖊️
+                        <Edit size={16} />
+                        Edit
                       </button>
                       <button
                         onClick={() => handleDelete(sweet.id)}
-                        className="flex items-center justify-center gap-2 px-4 py-2 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition"
+                        className="flex items-center justify-center gap-1 px-3 py-2.5 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition-all shadow-md text-sm"
                       >
-                        <span className="text-lg">🗑️</span>
-                        Delete 🗑️
+                        <Trash2 size={16} />
+                        Delete
                       </button>
                     </div>
                   </div>
