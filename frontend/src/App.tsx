@@ -8,10 +8,9 @@ import axios from "axios";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:1947";
 axios.defaults.baseURL = API_URL;
+
 function App() {
-  const [user, setUser] = useState<{ username: string; role: string } | null>(
-    null
-  );
+  const [user, setUser] = useState<{ username: string; role: string } | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -20,52 +19,30 @@ function App() {
 
     if (token && storedUser) {
       axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-      const parsedUser = JSON.parse(storedUser);
-      setUser(parsedUser);
+      setUser(JSON.parse(storedUser));
     }
     setLoading(false);
   }, []);
 
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 to-purple-100">
-        <p className="text-3xl font-bold text-purple-700">
-          Loading Sweet Haven...
-        </p>
-      </div>
-    );
-  }
+  if (loading) return <div>Loading...</div>;
 
   return (
     <Routes>
-      <Route
-        path="/login"
-        element={user ? <Navigate to="/" /> : <Login setUser={setUser} />}
-      />
-      <Route
-        path="/register"
-        element={user ? <Navigate to="/" /> : <Register />}
-      />
+      <Route path="/login" element={!user ? <Login setUser={setUser} /> : <Navigate to="/" />} />
+      <Route path="/register" element={!user ? <Register /> : <Navigate to="/" />} />
+
       <Route
         path="/"
-        element={
-          user ? (
-            <Dashboard user={user} setUser={setUser} />
-          ) : (
-            <Navigate to="/login" />
-          )
-        }
+        element={user ? <Dashboard user={user} setUser={setUser} /> : <Navigate to="/login" />}
       />
+
       <Route
         path="/admin"
         element={
-          user && user.role === "ADMIN" ? (
-            <AdminDashboard />
-          ) : (
-            <Navigate to="/" />
-          )
+          user?.role === "ADMIN" ? <AdminDashboard /> : <Navigate to="/" />
         }
       />
+
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
