@@ -6,13 +6,12 @@ import java.util.List;
 public interface SweetService {
 
     // Add a new sweet
-    static Sweet addSweet(Sweet sweet);
-
     Sweet addSweet(Sweet sweet);
 
     // Update sweet by ID
     Sweet updateSweet(Long id, Sweet sweet);
 
+    // Delete sweet by ID
     void deleteSweet(Long id);
 
     // Get single sweet

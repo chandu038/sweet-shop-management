@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-SweetShopBackendApplication<Sweet_Shop_Backend>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.Incubyte.Sweet_Shop_Backend.SweetShopBackendApplication",
+      "projectName": "Sweet_Shop_Backend",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
