@@ -37,6 +37,20 @@ This project was developed as part of the **Incubyte AI Kata Assessment**, follo
 - PostgreSQL
 - JWT (jjwt 0.12.x)
 - Maven
+- -------
+## 🧑‍💻 Developer Background & Note
+
+> **Developer Note (Transparency)**  
+
+> I am primarily a **Java Backend Developer** with hands-on experience in **Spring Boot, RESTful APIs, Spring Security, and Test-Driven Development (TDD)**.
+
+> I have **recently started learning React**, and as part of this assessment my primary focus was on delivering a **clean, well-structured, and well-tested backend** in alignment with **Software Craftsmanship principles**.
+
+> Due to this learning curve and limited time, the **backend implementation has been completed in full**, while the **frontend is partially implemented and is still under active improvement**.
+
+> The backend is **fully functional, production-ready, and independently testable** via REST APIs and automated tests.
+
+> I am continuously improving my frontend skills and am confident in completing and refining the React application with additional time.
 
 ### Testing
 - JUnit 5
