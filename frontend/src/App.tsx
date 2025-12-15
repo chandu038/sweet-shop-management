@@ -9,6 +9,14 @@ import axios from "axios";
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:1947";
 axios.defaults.baseURL = API_URL;
 
+axios.interceptors.request.use((config) => {
+  const token = localStorage.getItem("token");
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
 function App() {
   const [user, setUser] = useState<{ username: string; role: string } | null>(null);
   const [loading, setLoading] = useState(true);
