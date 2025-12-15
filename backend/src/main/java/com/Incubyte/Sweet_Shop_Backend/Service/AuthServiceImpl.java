@@ -67,4 +67,25 @@ public User registercheck(User user) {
     
     return savedUser;
 }
+
+public String logincheck(String username, String password) {
+    System.out.println("=== LOGIN DEBUG ===");
+    System.out.println("Login attempt for: " + username);
+    
+    User user = userRepo.findByUsername(username)
+            .orElseThrow(() -> new RuntimeException("User not found"));
+
+    System.out.println("Found user - Role: " + user.getRole());
+    
+    if (!encoder.matches(password, user.getPassword())) {
+        throw new RuntimeException("Invalid password");
+    }
+
+    String token = jwtUtil.generateToken(username);
+    System.out.println("Generated token for: " + username);
+    System.out.println("=== END LOGIN DEBUG ===");
+    
+    return token;
+}
+
 }
