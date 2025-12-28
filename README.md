@@ -235,34 +235,6 @@ Run Backend
 cd backend
 mvn clean spring-boot:run
 ```
-
----
-
-## 🧪 Test-Driven Development (TDD)
-
-TDD Coverage
-| Layer | Status |
-|---|---|
-| Sweet Service Tests | ✅ Completed |
-| Sweet Controller (MockMvc) | ⚠️ Attempted & Documented |
-| Auth Controller Tests | ⚠️ Attempted & Documented |
-
-TDD Workflow Followed
-- RED – Write failing test
-- GREEN – Minimal implementation
-- REFACTOR – Improve code quality
-
-Run Tests
-```bash
-mvn clean test
-```
-
-⚠️ AuthController Test Note (Transparency)
-
-AuthController MockMvc tests were attempted but resulted in Spring Security auto-configuration conflicts in Spring Boot 4.0.0, causing application context loading failures.
-
-To keep focus on core business logic, full TDD (RED → GREEN → REFACTOR) was completed for the Sweet module, which satisfies the assessment’s expectations. This limitation is documented transpare[...]
-
 ---
 
 ## 🎨 Frontend Overview
