@@ -260,9 +260,6 @@ Usage
 - Debugging Spring Security & JWT
 - Documentation & README preparation
 
-Reflection
-AI improved productivity, but all logic, refactoring, and validations were reviewed and implemented manually.
-
 ---
 
 ## 🧾 Git & Version Control
