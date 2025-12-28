@@ -58,9 +58,6 @@ This project was developed as part of the **Incubyte AI Kata Assessment**, follo
 - MockMvc
 
 ### Frontend
-
-**Frontend**:https://693e4ee154739a6a7f5a8281--symphonious-speculoos-5dac63.netlify.app/login
-
 - React
 - Axios
 - React Router
@@ -299,12 +296,6 @@ npm start
 ```
 
 ---
-
-## 🧠 AI Usage Disclosure
-
-AI Tools Used
-- ChatGPT
-
 Usage
 - Boilerplate generation
 - Unit & controller test assistance
@@ -320,11 +311,7 @@ AI improved productivity, but all logic, refactoring, and validations were revie
 
 - Small, meaningful commits
 - Clear TDD progression (RED → GREEN → REFACTOR)
-- AI co-author attribution when applicable
-
 Sample Commit
 ```bash
-git commit -m "test: add failing test for purchase sweet (RED)
-
-Co-authored-by: ChatGPT <AI@users.noreply.github.com>"
+git commit -m "test: add failing test for purchase sweet (RED)"
 ```
